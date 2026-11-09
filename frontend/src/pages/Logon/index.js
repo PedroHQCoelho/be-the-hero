@@ -17,10 +17,10 @@ export default function Logon(){
         e.preventDefault();
 
         try {
-            const response = await api.post('sessions', { id });
+        await api.post('sessions', { id });
 
             history.push('/profile');
-        } catch(err){
+            } catch(err){
             alert('Falha no login, tente novamente.');
         }
     }
